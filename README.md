@@ -1,4 +1,5 @@
 # ISAW AI Librarian
+![image](https://github.com/user-attachments/assets/7475a9da-254b-4cdc-a654-10fc91866f02)
 
 ### Overview
 The **ISAW AI Librarian** is an end-to-end pipeline tailored for humanities scholars. It enables:
