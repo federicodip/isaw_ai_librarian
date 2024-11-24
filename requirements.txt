@@ -1,0 +1,12 @@
+langchain
+langchain_openai
+langchain_community
+chromadb
+gradio
+requests
+beautifulsoup4
+openai
+PyPDF
+pytesseract
+beautifulsoup4
+chromadb
