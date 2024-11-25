@@ -11,7 +11,7 @@ from langchain.chains import RetrievalQA
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
-# ------------------------------DATA PREPROCESSING--------------------------------#
+# ------------------------------DOCUMENT LOADING--------------------------------#
 
 def download_pdf_from_html(page_url, output_dir, pdf_names):
     """
@@ -73,6 +73,8 @@ def main(base_url, output_dir, start=1800, end=1804):
         download_pdf_from_html(page_url, output_dir, pdf_names)
 
     save_pdf_names_to_file(pdf_names, os.path.join(output_dir, "pdf_names.txt"))
+
+# ------------------------------TEXT DATA PREPROCESSING--------------------------------#
 
 def split_chunk_into_halves(chunk):
     """
@@ -211,8 +213,6 @@ def convert_json_to_txt_clean(json_file, output_txt_file):
     except Exception as e:
         print(f"Error occurred: {e}")
 
-# ------------------------------TEXT EMBEDDING--------------------------#
-
 def extract_source(chunk):
     """
     Extract the source from a chunk of text.
@@ -222,6 +222,8 @@ def extract_source(chunk):
         source_start = chunk.rfind(source_marker) + len(source_marker)
         return chunk[source_start:].strip()
     return "Unknown"
+
+# ----------------------------------TEXT EMBEDDING------------------------------#
 
 def initialize_embeddings_and_vectorstore(documents, persist_directory):
     """
@@ -251,7 +253,7 @@ def initialize_qa_chain(vectordb):
     )
     return qa_chain
 
-# ------------------------------USER INTERFACE--------------------------#
+# ----------------------------------USER INTERFACE------------------------------#
 
 def refine_query(question, preferences, language):
     """
