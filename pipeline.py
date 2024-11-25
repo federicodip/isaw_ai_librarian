@@ -209,7 +209,6 @@ def convert_json_to_txt_clean(json_file, output_txt_file):
         with open(output_txt_file, 'w', encoding='utf-8') as file:
             json.dump(formatted_texts, file, ensure_ascii=False, indent=4)
         
-        print(f"Successfully converted JSON to text file: {output_txt_file}")
     except Exception as e:
         print(f"Error occurred: {e}")
 
