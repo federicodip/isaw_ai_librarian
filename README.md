@@ -81,7 +81,7 @@ This project is licensed under the MIT License.
 
 ## Acknowledgments
 - Developed with **[LangChain](https://www.langchain.com/)** and **[Gradio](https://www.gradio.app/)**.
-- Thank you to Prof. Sebastian Heath, New York University, and Prof. Riccardo Torlone, Roma Tre University, for their guidance in this project and for the work of ISAW scholars at the Institute for the Study of the Ancient World - NYU who provided inputs and curated the collections.
+- My gratitude goes to Sebastian Heath and Patrick Burns of New York University, as well as Riccardo Torlone of Roma Tre University, for their guidance on this project. I also wish to acknowledge the ISAW scholars at the Institute for the Study of the Ancient World at NYU for their valuable inputs and for curating the collections.
 
 ---
 
