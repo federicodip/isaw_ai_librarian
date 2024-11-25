@@ -58,7 +58,7 @@ def save_pdf_names_to_file(pdf_names, file_path):
             f.write(f'{entry["filename"]},{entry["source_url"]}\n')
     print(f"PDF names and URLs have been saved to {file_path}")
 
-def main(base_url, output_dir, start=1800, end=1804):
+def process_pdfs(base_url, output_dir, start=1800, end=1804):
     """
     Main function to download PDFs and save their names.
     """
@@ -328,7 +328,7 @@ def main():
     # Uncomment the lines below to run the workflow
     '''
     # Step 1: Download PDFs
-    main(base_url, output_dir)
+    process_pdfs(base_url, output_dir)
 
     # Step 2: Process PDFs into chunks
     input_txt_path = os.path.join(output_dir, "pdf_names.txt")
