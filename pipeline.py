@@ -341,7 +341,6 @@ def main():
 
     # Step 3: Load chunks and perform further processing
     chunks = load_chunks_from_json(output_json_path)
-    print(chunks)  # Display the chunks or pass them to another function
     '''
 
     input_json = "chunks_output.json"
