@@ -158,7 +158,7 @@ def save_pdf_chunks_as_strings(pdf_path, output_json_path, source_url):
     except Exception as e:
         print(f"Error processing {pdf_path}: {e}")
 
-def txt_to_list_of_strings(input_txt_path):
+def extract_filename_from_txt_file(input_txt_path):
     """
     Convert a text file to a list of strings.
     """
@@ -319,6 +319,8 @@ def handle_inputs(question, summary, preferences, language, qa_chain, vectordb):
     else:
         return "No input provided.", "No input provided."
 
+#---------------------------------WORKFLOW----------------------------------#
+
 def main():
     base_url = "https://dcaa.hosting.nyu.edu/items/show/"
     output_dir = "saved_pdfs"
@@ -331,7 +333,7 @@ def main():
 
     # Step 2: Process PDFs into chunks
     input_txt_path = os.path.join(output_dir, "pdf_names.txt")
-    files = txt_to_list_of_strings(input_txt_path)
+    files = extract_filename_from_txt_file(input_txt_path)
 
     for file_entry in files:
         file_name, source_url = file_entry
@@ -341,11 +343,9 @@ def main():
     # Step 3: Load chunks and perform further processing
     chunks = load_chunks_from_json(output_json_path)
     '''
-
     input_json = "chunks_output.json"
     output_txt = "chunks_output.txt"
     convert_json_to_txt_clean(input_json, output_txt)
-
     file_path = "chunks_output.txt"
     documents = []
     with open(file_path, "r", encoding="utf-8") as file:
