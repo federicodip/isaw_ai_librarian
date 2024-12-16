@@ -2,7 +2,7 @@
 ![image](https://github.com/user-attachments/assets/7475a9da-254b-4cdc-a654-10fc91866f02)
 
 ### Overview
-The **ISAW AI Librarian** is an end-to-end pipeline tailored for humanities scholars. It enables:
+The  **[ISAW AI Librarian](https://github.com/your-username/isaw-ai-librarian)** is an end-to-end pipeline tailored for humanities scholars. It enables:
 1. **Data Collection**: Scraping and downloading scholarly articles from online sources.
 2. **Data Preprocessing**: Splitting text into manageable chunks with metadata.
 3. **Knowledge Augmentation**: Creating an augmented retrieval system to query domain-specific knowledge.
